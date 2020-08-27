@@ -538,7 +538,7 @@ dai grafici relativi all'implementazione presentata, è possibile ad esempio all
 interi genomi virali, senza dover ricorrere a tecniche approssimate e su calcolatori di dimensioni e
 potenza modesta, come un normale PC. 
 
-```{r}
+```{r, warning=FALSE, message = FALSE, eval=TRUE}
 # Score per l'allineamento dei genomi di COVID cinese e statunitense
 
 seq1 <- read_fasta("COVID_CHINA.fasta")
