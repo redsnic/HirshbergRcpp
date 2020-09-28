@@ -1,11 +1,11 @@
 ---
 title: "Algoritmi di allineamento in spazio lineare"
-output: 
-    ioslides_presentation:
-        df_print: "paged"
-        widescreen: true
-        small: true
-
+output:
+  ioslides_presentation:
+    df_print: paged
+    small: yes
+    widescreen: yes
+  slidy_presentation: default
 ---
 
 <style>
@@ -133,7 +133,7 @@ L'attività di backtracking richede di eseguire un numero logaritmico (rispetto 
 di ricalcolo dell'allinemento su matrici di dimensione via via dimezzata. Facendo i conti la complessità totale risulta essere quindi 
 (nell'assunzione che siano necessarie $NM$ operazioni per l'allineamento, che in caso sono suddivise sui due quadranti):
 
-$$ \sum_{i=1}^{log(M)}{ N(M/2^i) } = NM\sum_{i=1}^{log(M)}{ (1/2^i) } = NM$$
+$$ \sum_{i=1}^{log(M)}{ N(M/2^i) } = NM\sum_{i=1}^{log(M)}{ (1/2^i) } \le NM$$
 
 Il che quindi permette di mantenere la complessità computazionale invariata rispetto all'algoritmo di Needelman-Wunsch (ossia $O(NM)$).
 La complessità spaziale invece è ridotta a $O(N+M)$ in quato la matrice di programmazione dinamica viene calcolata in spazio ridotto come
